@@ -1,5 +1,3 @@
-/vendor
+/test/integeration_test/vendor
 /node_modules
-Homestead.yaml
-Homestead.json
 .env
