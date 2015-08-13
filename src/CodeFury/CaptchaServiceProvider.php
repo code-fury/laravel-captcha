@@ -5,3 +5,7 @@
  * Date: 12/08/15
  * Time: 2:22 PM
  */
+
+class CaptchaServiceProvider extends \App\Providers\AppServiceProvider {
+
+}

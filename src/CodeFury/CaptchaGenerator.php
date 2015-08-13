@@ -37,12 +37,12 @@ class CaptchaGenerator {
         $this->image = imagecreatetruecolor($this->width, $this->height);
     }
 
-    public function create_image($captcha) {
+    public function create_image($captcha, $fname) {
         $background_color = imagecolorallocate($this->image, 255, 255, 255);
         imagefilledrectangle($this->image, 0, 0, $this->width, $this->height, $background_color);
         $this->draw_dots();
         $this->draw_text($captcha);
-        imagepng($this->image, "image.png");
+        imagepng($this->image, $fname);
     }
 
     public function generate_captcha_text() {
