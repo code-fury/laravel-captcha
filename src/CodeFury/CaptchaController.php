@@ -22,7 +22,7 @@ class CaptchaController extends \App\Http\Controllers\Controller {
         return "/captcha?fname=".$fname;
     }
 
-    public function get_captcha_image(Request $request) {
+    public function get_captcha_image() {
         $fname = Input::get('fname');
         $content = file_get_contents($fname);
         $response = new Response($content, 200);
