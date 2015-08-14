@@ -6,12 +6,18 @@
  * Time: 2:22 PM
  */
 
-use Illuminate\Routing;
+namespace CodeFury;
 
-class CaptchaServiceProvider extends \Illuminate\Support\ServiceProvider {
+use Illuminate\Routing;
+use \Illuminate\Support;
+
+class CaptchaServiceProvider extends ServiceProvider {
 
     public function register() {
         require_once("validator.php");
+        $this->app->bind('captcha', function () {
+            return new CaptchaHelper();
+        });
     }
 
     public function boot() {

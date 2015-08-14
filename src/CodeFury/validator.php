@@ -7,7 +7,7 @@
  */
 
 $validator->extend(
-    'catchpa',
+    'captcha',
     function ($attribute, $value, $parameter) {
         return $value == session('captcha');
     }

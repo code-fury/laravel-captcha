@@ -5,6 +5,7 @@
  * Date: 12/08/15
  * Time: 2:22 PM
  */
+namespace CodeFury;
 
 use \CodeFury\CaptchaGenerator;
 use \Illuminate\Http\Response;
